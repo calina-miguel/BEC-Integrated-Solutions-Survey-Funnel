@@ -118,6 +118,16 @@
             font-size: 0.9rem;
             letter-spacing: 0.02em;
         }
+        .hero-title {
+            font-size: clamp(2rem, 2.2vw, 2.05rem);
+            line-height: 1.1;
+        }
+        .smooth-shadow {
+            box-shadow: 0 10px 28px rgba(11, 31, 58, 0.10);
+        }
+        .rounded-full {
+            border-radius: 10px !important;
+        }
         @keyframes float { from { transform: translate3d(0,0,0) scale(1); } to { transform: translate3d(18px,-18px,0) scale(1.06); } }
         @media (max-width: 767px) {
             .mobile-center, .mobile-center * { text-align: center !important; }
@@ -139,13 +149,14 @@
         <header class="relative z-10 border-b border-slate-200 bg-white/90 px-4 py-4 backdrop-blur-sm sm:px-6">
             <div class="mx-auto flex max-w-7xl items-center justify-between gap-4">
                 <div class="flex items-center gap-3">
-                    <div class="flex h-11 w-11 items-center justify-center rounded-2xl bg-[linear-gradient(135deg,var(--bec-blue),var(--bec-red))] text-white font-black">B</div>
+                    <div class="flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-2xl bg-white p-3 shadow-sm">
+                        <img src="https://cfrouting.zoeysite.com/cdn-cgi/image/format=auto,quality=85,fit=scale-down/https://s3.amazonaws.com/zcom-media/sites/a0iE000000FHX46IAH/media/mediamanager/BEC_Integrated_Logo-6.jpg" alt="BEC Integrated Solutions" class="h-full w-full object-contain" />
+                    </div>
                     <div>
-                        <p class="text-xs font-bold uppercase tracking-[0.24em] text-slate-500">BEC Integrated Solutions</p>
-                        <h1 class="text-lg font-extrabold text-[var(--bec-ink)] sm:text-xl">Wireless Nurse Call Survey</h1>
+                        <h1 class="hero-title font-extrabold text-[var(--bec-ink)]">Wireless Nurse Call Survey</h1>
                     </div>
                 </div>
-                <div class="hidden rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-600 sm:block">Made in the USA · UL1069 options available</div>
+                <div class="hidden rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-600 sm:block smooth-shadow">Made in the USA · UL1069 options available</div>
             </div>
         </header>
 
@@ -190,7 +201,7 @@
                             </ul>
                         </div>
                         <div class="mt-6 rounded-[1.75rem] border border-slate-200 bg-white p-5">
-                            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">Featured products in this funnel</p>
+                            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">Featured products in this Survey</p>
                             <div class="mt-4 grid gap-3 text-sm text-slate-700">
                                 <div class="rounded-2xl bg-slate-50 px-4 py-3">MV200 Wireless Nurse Call Kits</div>
                                 <div class="rounded-2xl bg-slate-50 px-4 py-3">MV500 Touchscreen Console</div>
