@@ -156,14 +156,14 @@
         <div class="orb orb-b right-[-2rem] top-32 h-52 w-52"></div>
         <div class="orb orb-c bottom-16 left-1/3 h-44 w-44"></div>
 
-        <header class="relative z-10 border-b border-slate-200 bg-white/90 px-4 py-4 backdrop-blur-sm sm:px-6">
+        <header class="relative z-10 border-b border-slate-200 bg-white/90 px-4 py-0 backdrop-blur-sm sm:px-6">
             <div class="mx-auto flex max-w-7xl items-center justify-between gap-4">
                 <div class="flex items-center gap-3">
-                    <div class="flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-2xl bg-white p-3 shadow-sm">
+                    <div class="flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-2xl bg-white p-0 shadow-sm">
                         <img src="https://cfrouting.zoeysite.com/cdn-cgi/image/format=auto,quality=85,fit=scale-down/https://s3.amazonaws.com/zcom-media/sites/a0iE000000FHX46IAH/media/mediamanager/BEC_Integrated_Logo-6.jpg" alt="BEC Integrated Solutions" class="h-full w-full object-contain" />
                     </div>
                     <div>
-                        <h1 class="hero-title font-extrabold text-[var(--bec-ink)]">Wireless Nurse Call Survey</h1>
+                        <h1 class="hero-title font-bold text-[var(--bec-ink)]">Wireless Nurse Call Survey</h1>
                     </div>
                 </div>
                 <div class="hidden rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-600 sm:block smooth-shadow">Made in the USA · UL1069 options available</div>
@@ -178,11 +178,11 @@
                     <div class="panel rounded-[2rem] p-4 sm:p-6 lg:p-8">
                         <div class="question-card overflow-hidden rounded-[1.6rem] p-6 sm:p-7">
                             <div class="flex items-center justify-between gap-3">
-                                <p id="question-count" class="text-sm font-bold uppercase tracking-[0.28em] text-sky-200/90">Question 1 of 4</p>
-                                <span id="progress-pill" class="rounded-full bg-white/10 px-3 py-1 text-xs font-bold text-white">25% Complete</span>
+                                <p id="question-count" class="text-sm font-bold uppercase tracking-[0.28em] text-sky-200/90">Question 1 of 5</p>
+                                <span id="progress-pill" class="rounded-full bg-white/10 px-3 py-1 text-xs font-bold text-white">20% Complete</span>
                             </div>
                             <div class="mt-4 h-2 overflow-hidden rounded-full bg-white/10">
-                                <div id="progress-fill" class="h-full rounded-full bg-[linear-gradient(90deg,var(--bec-gold),#ffffff,var(--bec-red))]" style="width:25%"></div>
+                                <div id="progress-fill" class="h-full rounded-full bg-[linear-gradient(90deg,var(--bec-gold),#ffffff,var(--bec-red))]" style="width:20%"></div>
                             </div>
                             <div class="mt-6 rounded-[1.5rem] bg-white/96 p-5 text-[var(--bec-ink)] shadow-lg">
                                 <h3 id="question-title" class="text-2xl font-extrabold sm:text-3xl">What type of facility are you planning for?</h3>
@@ -373,6 +373,16 @@
                     { value: 'quote', label: 'Ready for a quote', insight: 'You are close to a direct conversation.', profile: 'Quote ready', priority: 'Fast quote', system: 'Request answers or quote fast', scores: { a: 2, b: 2, c: 1 } },
                     { value: 'bid', label: 'Need discounted project bids', insight: 'We will route you to contact/support.', profile: 'Project bid', priority: 'Design assistance', system: 'Contact BEC Integrated Solutions', scores: { a: 1, b: 2, c: 3 } }
                 ]
+            },
+            {
+                key: 'alerting',
+                question: 'How should staff receive alerts?',
+                helper: 'Choose the communication method most important for your workflow.',
+                options: [
+                    { value: 'central', label: 'Central station only', insight: 'Simple station-based workflow for smaller teams.', profile: 'Centralized response model', priority: 'Simple operations', system: 'Wireless bell system baseline package', scores: { a: 3, b: 1, c: 0 } },
+                    { value: 'mobile', label: 'Mobile devices and pagers', insight: 'Real-time mobile alerts for faster staff response.', profile: 'Mobile-first alerting', priority: 'Faster response times', system: 'Wireless system with mobile/pager alerts', scores: { a: 2, b: 3, c: 1 } },
+                    { value: 'integrated', label: 'Integrated facility-wide alerting', insight: 'Best for larger properties and multi-zone operations.', profile: 'Integrated alerting model', priority: 'Coverage and integration', system: 'Expanded wireless platform with advanced alert routing', scores: { a: 0, b: 2, c: 3 } }
+                ]
             }
         ];
 
@@ -546,7 +556,7 @@
                 showSection(route);
                 return;
             }
-            showSection('landing');
+            showSection('survey');
         }
 
         renderQuestion();
