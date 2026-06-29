@@ -86,7 +86,7 @@
             box-shadow: 0 16px 30px rgba(210,35,42,0.10);
         }
         .btn-primary {
-            background: linear-gradient(90deg, var(--bec-blue), var(--bec-red));
+            background: #499bbf;
             color: #fff;
             box-shadow: 0 12px 28px rgba(11,31,58,0.22);
         }
@@ -173,7 +173,7 @@
         <main class="relative z-10 mx-auto flex min-h-[calc(100vh-84px)] max-w-7xl flex-col gap-6 px-4 py-8 sm:px-6 lg:px-8">
             
 
-            <section id="survey" class="w-full">
+            <section id="survey" class="w-full order-2">
                 <div class="grid gap-6 lg:grid-cols-[1.08fr_0.92fr]">
                     <div class="panel rounded-[2rem] p-4 sm:p-6 lg:p-8">
                         <div class="question-card overflow-hidden rounded-[1.6rem] p-6 sm:p-7">
@@ -221,12 +221,12 @@
                 </div>
             </section>
 
-            <section id="step-landing" class="w-full">
+            <section id="step-landing" class="w-full order-1">
                 <div class="grid gap-6 lg:grid-cols-[1.08fr_0.92fr] lg:items-stretch">
                     <div class="panel rounded-[2rem] p-6 sm:p-8 lg:p-10">
                         <span class="hero-chip inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold">Wireless Nurse Call Kits · Small Systems</span>
                         <div class="mt-5 max-w-3xl">
-                            <h2 class="hero-lead font-black leading-tight text-[var(--bec-ink)]">Find the right wireless nurse call setup for your facility.</h2>
+                            <h2 class="hero-lead font-black leading-tight text-[var(--bec-ink)]">Find the right Wireless Nurse Call Setup for your facility.</h2>
                             <p class="mt-5 text-lg leading-8 muted sm:text-xl">Answer a few questions and get a recommendation aligned with your facility type, coverage needs, and support goals. Built around BEC Integrated Solutions' wireless nurse call systems, pendants, desk consoles, wanderguard options, and UL1069-ready solutions.</p>
                         </div>
                         <div class="mt-7 grid gap-4 sm:grid-cols-3">
@@ -377,7 +377,7 @@
             {
                 key: 'alerting',
                 question: 'How should staff receive alerts?',
-                helper: 'Choose the communication method most important for your workflow.',
+                helper: 'Choose the communication method that best fits your workflow.',
                 options: [
                     { value: 'central', label: 'Central station only', insight: 'Simple station-based workflow for smaller teams.', profile: 'Centralized response model', priority: 'Simple operations', system: 'Wireless bell system baseline package', scores: { a: 3, b: 1, c: 0 } },
                     { value: 'mobile', label: 'Mobile devices and pagers', insight: 'Real-time mobile alerts for faster staff response.', profile: 'Mobile-first alerting', priority: 'Faster response times', system: 'Wireless system with mobile/pager alerts', scores: { a: 2, b: 3, c: 1 } },
@@ -402,7 +402,12 @@
 
         function showSection(name) {
             Object.values(sections).forEach((section) => section.classList.add('hidden'));
-            sections[name].classList.remove('hidden');
+            if (name === 'landing') {
+                sections.landing.classList.remove('hidden');
+                sections.survey.classList.remove('hidden');
+            } else {
+                sections[name].classList.remove('hidden');
+            }
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
@@ -556,7 +561,7 @@
                 showSection(route);
                 return;
             }
-            showSection('survey');
+            showSection('landing');
         }
 
         renderQuestion();
