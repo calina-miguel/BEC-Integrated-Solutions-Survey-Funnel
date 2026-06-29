@@ -171,6 +171,54 @@
         </header>
 
         <main class="relative z-10 mx-auto flex min-h-[calc(100vh-84px)] max-w-7xl items-center px-4 py-8 sm:px-6 lg:px-8">
+            <section id="survey" class="w-full">
+                <div class="grid gap-6 lg:grid-cols-[1.08fr_0.92fr]">
+                    <div class="panel rounded-[2rem] p-4 sm:p-6 lg:p-8">
+                        <div class="question-card overflow-hidden rounded-[1.6rem] p-6 sm:p-7">
+                            <div class="flex items-center justify-between gap-3">
+                                <p id="question-count" class="text-sm font-bold uppercase tracking-[0.28em] text-sky-200/90">Question 1 of 4</p>
+                                <span id="progress-pill" class="rounded-full bg-white/10 px-3 py-1 text-xs font-bold text-white">25% Complete</span>
+                            </div>
+                            <div class="mt-4 h-2 overflow-hidden rounded-full bg-white/10">
+                                <div id="progress-fill" class="h-full rounded-full bg-[linear-gradient(90deg,var(--bec-gold),#ffffff,var(--bec-red))]" style="width:25%"></div>
+                            </div>
+                            <div class="mt-6 rounded-[1.5rem] bg-white/96 p-5 text-[var(--bec-ink)] shadow-lg">
+                                <h3 id="question-title" class="text-2xl font-extrabold sm:text-3xl">What type of facility are you planning for?</h3>
+                                <div id="options" class="mt-4 grid gap-3"></div>
+                                <p id="question-helper" class="mt-4 text-sm text-slate-500">Choose one answer to continue.</p>
+                            </div>
+                            <div class="mt-6 flex flex-wrap items-center justify-between gap-3">
+                                <button id="back-btn" class="btn-secondary rounded-full px-5 py-3 text-sm font-bold opacity-50" disabled>Back</button>
+                                <button id="next-btn" class="btn-primary rounded-full px-6 py-3 text-sm font-bold">See My Recommendation →</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel rounded-[2rem] p-6 sm:p-8 lg:p-10">
+                        <p class="text-xs font-bold uppercase tracking-[0.24em] text-slate-500">Live profile</p>
+                        <h4 id="profile-title" class="mt-3 text-3xl font-black text-[var(--bec-ink)]">Balanced wireless system</h4>
+                        <p id="profile-copy" class="mt-4 text-base leading-7 muted">A recommendation preview will update as you answer.</p>
+                        <div class="mt-6 grid gap-4">
+                            <div class="stat rounded-2xl p-4">
+                                <p class="label text-xs font-semibold uppercase tracking-[0.18em]">Facility fit</p>
+                                <p id="profile-facility" class="mt-2 text-xl font-bold text-[var(--bec-ink)]">Assisted living / senior care</p>
+                            </div>
+                            <div class="stat rounded-2xl p-4">
+                                <p class="label text-xs font-semibold uppercase tracking-[0.18em]">Priority</p>
+                                <p id="profile-priority" class="mt-2 text-xl font-bold text-[var(--bec-ink)]">Expandability & support</p>
+                            </div>
+                            <div class="stat rounded-2xl p-4">
+                                <p class="label text-xs font-semibold uppercase tracking-[0.18em]">System suggestion</p>
+                                <p id="profile-system" class="mt-2 text-xl font-bold text-[var(--bec-ink)]">MV200 Wireless Nurse Call Kits</p>
+                            </div>
+                        </div>
+                        <div class="mt-6 rounded-[1.4rem] border border-slate-200 bg-slate-50 p-5">
+                            <p class="text-sm leading-7 muted">Designed for facilities that want a reliable, flexible and affordable wireless nurse call system with pendants, push buttons, desk consoles, wanderguard integration, and UL1069-ready options.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <section id="step-landing" class="w-full">
                 <div class="grid gap-6 lg:grid-cols-[1.08fr_0.92fr] lg:items-stretch">
                     <div class="panel rounded-[2rem] p-6 sm:p-8 lg:p-10">
@@ -217,54 +265,6 @@
                                 <div class="rounded-2xl bg-slate-50 px-4 py-3">MV500 Touchscreen Console</div>
                                 <div class="rounded-2xl bg-slate-50 px-4 py-3">WanderGuard & UL1069 Options</div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="survey" class="w-full">
-                <div class="grid gap-6 lg:grid-cols-[1.08fr_0.92fr]">
-                    <div class="panel rounded-[2rem] p-4 sm:p-6 lg:p-8">
-                        <div class="question-card overflow-hidden rounded-[1.6rem] p-6 sm:p-7">
-                            <div class="flex items-center justify-between gap-3">
-                                <p id="question-count" class="text-sm font-bold uppercase tracking-[0.28em] text-sky-200/90">Question 1 of 4</p>
-                                <span id="progress-pill" class="rounded-full bg-white/10 px-3 py-1 text-xs font-bold text-white">25% Complete</span>
-                            </div>
-                            <div class="mt-4 h-2 overflow-hidden rounded-full bg-white/10">
-                                <div id="progress-fill" class="h-full rounded-full bg-[linear-gradient(90deg,var(--bec-gold),#ffffff,var(--bec-red))]" style="width:25%"></div>
-                            </div>
-                            <div class="mt-6 rounded-[1.5rem] bg-white/96 p-5 text-[var(--bec-ink)] shadow-lg">
-                                <h3 id="question-title" class="text-2xl font-extrabold sm:text-3xl">What type of facility are you planning for?</h3>
-                                <div id="options" class="mt-4 grid gap-3"></div>
-                                <p id="question-helper" class="mt-4 text-sm text-slate-500">Choose one answer to continue.</p>
-                            </div>
-                            <div class="mt-6 flex flex-wrap items-center justify-between gap-3">
-                                <button id="back-btn" class="btn-secondary rounded-full px-5 py-3 text-sm font-bold opacity-50" disabled>Back</button>
-                                <button id="next-btn" class="btn-primary rounded-full px-6 py-3 text-sm font-bold">See My Recommendation →</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="panel rounded-[2rem] p-6 sm:p-8 lg:p-10">
-                        <p class="text-xs font-bold uppercase tracking-[0.24em] text-slate-500">Live profile</p>
-                        <h4 id="profile-title" class="mt-3 text-3xl font-black text-[var(--bec-ink)]">Balanced wireless system</h4>
-                        <p id="profile-copy" class="mt-4 text-base leading-7 muted">A recommendation preview will update as you answer.</p>
-                        <div class="mt-6 grid gap-4">
-                            <div class="stat rounded-2xl p-4">
-                                <p class="label text-xs font-semibold uppercase tracking-[0.18em]">Facility fit</p>
-                                <p id="profile-facility" class="mt-2 text-xl font-bold text-[var(--bec-ink)]">Assisted living / senior care</p>
-                            </div>
-                            <div class="stat rounded-2xl p-4">
-                                <p class="label text-xs font-semibold uppercase tracking-[0.18em]">Priority</p>
-                                <p id="profile-priority" class="mt-2 text-xl font-bold text-[var(--bec-ink)]">Expandability & support</p>
-                            </div>
-                            <div class="stat rounded-2xl p-4">
-                                <p class="label text-xs font-semibold uppercase tracking-[0.18em]">System suggestion</p>
-                                <p id="profile-system" class="mt-2 text-xl font-bold text-[var(--bec-ink)]">MV200 Wireless Nurse Call Kits</p>
-                            </div>
-                        </div>
-                        <div class="mt-6 rounded-[1.4rem] border border-slate-200 bg-slate-50 p-5">
-                            <p class="text-sm leading-7 muted">Designed for facilities that want a reliable, flexible and affordable wireless nurse call system with pendants, push buttons, desk consoles, wanderguard integration, and UL1069-ready options.</p>
                         </div>
                     </div>
                 </div>
