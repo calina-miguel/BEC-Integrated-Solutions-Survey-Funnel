@@ -318,9 +318,9 @@
                             <h3 id="result-title" class="mt-3 text-3xl font-black text-[var(--bec-ink)] sm:text-4xl">Your ideal system will appear here.</h3>
                             <p id="result-copy" class="mt-4 text-base leading-7 muted"></p>
                             <div class="mt-6 grid gap-4 sm:grid-cols-3">
-                                <div class="stat rounded-2xl p-4"><p class="label text-xs font-semibold uppercase tracking-[0.18em]">Score</p><p id="score-a" class="mt-2 text-2xl font-black text-[var(--bec-ink)]">0</p></div>
-                                <div class="stat rounded-2xl p-4"><p class="label text-xs font-semibold uppercase tracking-[0.18em]">Score</p><p id="score-b" class="mt-2 text-2xl font-black text-[var(--bec-ink)]">0</p></div>
-                                <div class="stat rounded-2xl p-4"><p class="label text-xs font-semibold uppercase tracking-[0.18em]">Score</p><p id="score-c" class="mt-2 text-2xl font-black text-[var(--bec-ink)]">0</p></div>
+                                <div class="stat rounded-2xl p-4"><p class="label text-xs font-semibold uppercase tracking-[0.18em]">Component 1</p><p id="component-a" class="mt-2 text-xl font-black text-[var(--bec-ink)]">Wireless pendant call points</p></div>
+                                <div class="stat rounded-2xl p-4"><p class="label text-xs font-semibold uppercase tracking-[0.18em]">Component 2</p><p id="component-b" class="mt-2 text-xl font-black text-[var(--bec-ink)]">Desk console / nurse station unit</p></div>
+                                <div class="stat rounded-2xl p-4"><p class="label text-xs font-semibold uppercase tracking-[0.18em]">Component 3</p><p id="component-c" class="mt-2 text-xl font-black text-[var(--bec-ink)]">WanderGuard or expansion module</p></div>
                             </div>
                         </div>
                         <div class="rounded-[1.75rem] bg-gradient-to-br from-[var(--bec-navy)] to-[#173c69] p-6 text-white shadow-xl">
@@ -460,17 +460,32 @@
                 a: {
                     title: 'MV200 Wireless Nurse Call Kits',
                     copy: 'Best aligned for smaller systems, retrofit projects, and buyers prioritizing lower upfront installation costs and easy deployment.',
-                    quote: 'Get Answers or a Quote - Fast'
+                    quote: 'Get Answers or a Quote - Fast',
+                    components: [
+                        'MV200 master unit with wireless receiver',
+                        'Wireless pendant call points',
+                        'Basic nurse station console'
+                    ]
                 },
                 b: {
                     title: 'MV500 Wireless Nurse Call System',
                     copy: 'Best for growing facilities that need flexibility, reliable communication, and an expandable nurse call platform.',
-                    quote: 'Request a Consultation or Quote'
+                    quote: 'Request a Consultation or Quote',
+                    components: [
+                        'MV500 touchscreen console',
+                        'Wireless room call stations',
+                        'Expansion-ready zone modules'
+                    ]
                 },
                 c: {
                     title: 'PC-Based Wireless Nurse Call Platform',
                     copy: 'Best for larger facilities needing integration, wander management, and a unified communication platform.',
-                    quote: 'Speak with BEC for Design Assistance'
+                    quote: 'Speak with BEC for Design Assistance',
+                    components: [
+                        'PC-based management workstation',
+                        'WanderGuard integration module',
+                        'Campus-wide wireless expansion hardware'
+                    ]
                 }
             };
 
@@ -503,9 +518,9 @@
             document.getElementById('result-title').textContent = rec.title;
             document.getElementById('result-copy').textContent = rec.copy;
             document.getElementById('quote-title').textContent = rec.quote;
-            document.getElementById('score-a').textContent = rec.scores.a;
-            document.getElementById('score-b').textContent = rec.scores.b;
-            document.getElementById('score-c').textContent = rec.scores.c;
+            document.getElementById('component-a').textContent = rec.components[0];
+            document.getElementById('component-b').textContent = rec.components[1];
+            document.getElementById('component-c').textContent = rec.components[2];
         }
 
         document.getElementById('next-btn').addEventListener('click', proceed);
