@@ -66,7 +66,7 @@
             border: 1px solid rgba(15, 76, 129, 0.16);
         }
         .question-card {
-            background: linear-gradient(180deg, rgba(11,31,58,0.98), rgba(11,31,58,0.92));
+            background: #2f6f9a;
             color: #fff;
         }
         .option {
@@ -151,6 +151,7 @@
 </head>
 <body>
     <div class="shell mobile-center">
+        <div class="relative z-20 h-[10px] w-full bg-[#499bbf]"></div>
         <div class="gridwash" aria-hidden="true"></div>
         <div class="orb orb-a left-[-3rem] top-10 h-40 w-40"></div>
         <div class="orb orb-b right-[-2rem] top-32 h-52 w-52"></div>
@@ -159,7 +160,7 @@
         <header class="relative z-10 border-b border-slate-200 bg-white/90 px-4 py-0 backdrop-blur-sm sm:px-6">
             <div class="mx-auto flex max-w-7xl items-center justify-between gap-4">
                 <div class="flex items-center gap-3">
-                    <div class="flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-2xl bg-white p-0 shadow-sm">
+                    <div class="flex h-[84px] w-[160px] items-center justify-center overflow-hidden rounded-2xl bg-white p-0 shadow-sm sm:h-[92px] sm:w-[176px]">
                         <img src="https://cfrouting.zoeysite.com/cdn-cgi/image/format=auto,quality=85,fit=scale-down/https://s3.amazonaws.com/zcom-media/sites/a0iE000000FHX46IAH/media/mediamanager/BEC_Integrated_Logo-6.jpg" alt="BEC Integrated Solutions" class="h-full w-full object-contain" />
                     </div>
                     <div>
@@ -185,7 +186,7 @@
                                 <div id="progress-fill" class="h-full rounded-full bg-[linear-gradient(90deg,var(--bec-gold),#ffffff,var(--bec-red))]" style="width:20%"></div>
                             </div>
                             <div class="mt-6 rounded-[1.5rem] bg-white/96 p-5 text-[var(--bec-ink)] shadow-lg">
-                                <h3 id="question-title" class="text-2xl font-extrabold sm:text-3xl">What type of facility are you planning for?</h3>
+                                <h3 id="question-title" class="text-2xl font-bold text-white sm:text-3xl">What type of facility are you planning for?</h3>
                                 <div id="options" class="mt-4 grid gap-3"></div>
                                 <p id="question-helper" class="mt-4 text-sm text-slate-500">Choose one answer to continue.</p>
                             </div>
@@ -251,7 +252,7 @@
 
                     <div class="panel rounded-[2rem] p-6 sm:p-8 lg:p-10">
                         <div class="accent-line"></div>
-                        <div class="mt-6 rounded-[1.75rem] bg-gradient-to-br from-[var(--bec-navy)] to-[#173c69] p-6 text-white shadow-xl">
+                        <div class="mt-6 rounded-[1.75rem] bg-[#2f6f9a] p-6 text-white shadow-xl">
                             <p class="text-xs font-bold uppercase tracking-[0.24em] text-sky-200/90">Why facilities choose BEC</p>
                             <ul class="mt-5 space-y-3 text-sm leading-7 text-slate-100">
                                 <li>• Pre-programmed systems with no recurring software costs</li>
